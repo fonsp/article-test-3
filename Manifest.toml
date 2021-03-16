@@ -29,9 +29,9 @@ uuid = "8ba89e20-285c-5b6f-9357-94700520ee1b"
 
 [[FuzzyCompletions]]
 deps = ["REPL"]
-git-tree-sha1 = "5ca3ddf3061771d25d1699ce53a80a39300811e3"
+git-tree-sha1 = "9cde086faa37f32794be3d2df393ff064d43cd66"
 uuid = "fb4132e2-a121-4a70-b8a1-d5b831dcdcc2"
-version = "0.4.0"
+version = "0.4.1"
 
 [[GitHubActions]]
 deps = ["JSON", "Logging"]
@@ -143,8 +143,8 @@ version = "0.1.0"
 
 [[PlutoUtils]]
 deps = ["Base64", "GitHubActions", "HTTP", "Logging", "Pkg", "Pluto", "SHA", "Sockets"]
-git-tree-sha1 = "574e9c7e482ed576f77622375194e01d338e5ca3"
-repo-rev = "7e05465"
+git-tree-sha1 = "2fc7796ba3f3eb67243cf5d90e89a10e74689622"
+repo-rev = "ecafebf"
 repo-url = "https://github.com/fonsp/PlutoUtils.jl"
 uuid = "a5ec66cb-57bb-4ae5-9259-3342d9ed6c94"
 version = "0.1.0"
