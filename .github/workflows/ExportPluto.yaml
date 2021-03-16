@@ -28,7 +28,7 @@ jobs:
                 path: ~/.julia
                 key: ${{ runner.os }}-dotjulia-v2
 
-            - run: julia -e '@show DEPOT_PATH`
+            - run: julia -e '@show DEPOT_PATH'
             
             - name: Run Pluto notebooks
               run: julia -e 'import Pkg;
