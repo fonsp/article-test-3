@@ -15,12 +15,19 @@ jobs:
               uses: actions/cache@v2
               with:
                 path: pluto_state_cache
-                key: ${{ runner.os }}-pluto_state_cache-${{ hashFiles('**/Project.toml', '**/Manifest.toml') }}
-
+                key: ${{ runner.os }}-pluto_state_cache-v1-${{ hashFiles('**/Project.toml', '**/Manifest.toml') }}
+    
             - name: Install Julia
               uses: julia-actions/setup-julia@v1
               with:
                   version: 1.5
+  
+            - name: Set up julia file cache
+              uses: actions/cache@v2
+              with:
+                path: .julia
+                key: ${{ runner.os }}-dotjulia-v1
+
             - name: Run Pluto notebooks
               run: julia -e 'import Pkg;
                   Pkg.activate(".");
