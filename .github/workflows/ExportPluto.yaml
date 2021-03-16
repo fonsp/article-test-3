@@ -9,6 +9,12 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
+            
+            - name: Set up notebook state cache
+              uses: actions/cache@v2
+              with:
+                path: pluto_state_cache
+                key: ${{ runner.os }}-pluto_state_cache-${{ hashFiles('**/Project.toml', '**/Manifest.toml') }}
 
             - name: Install Julia
               uses: julia-actions/setup-julia@v1
@@ -20,7 +26,7 @@ jobs:
                   Pkg.instantiate();
                   import PlutoUtils;
 
-                  PlutoUtils.Export.github_action(; export_dir=".", offer_binder=true, bind_server_url="https://article-test-3.herokuapp.com/");'
+                  PlutoUtils.Export.github_action(; export_dir=".", cache_dir="pluto_state_cache", offer_binder=true, bind_server_url="https://article-test-3.herokuapp.com/");'
             - name: Deploy to gh-pages
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
