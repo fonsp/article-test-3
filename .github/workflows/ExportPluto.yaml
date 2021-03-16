@@ -22,13 +22,11 @@ jobs:
               with:
                   version: 1.5
   
-            - name: Set up julia file cache
+            - name: Set up dotjulia file cache
               uses: actions/cache@v2
               with:
                 path: ~/.julia
                 key: ${{ runner.os }}-dotjulia-v2
-
-            - run: julia -e '@show DEPOT_PATH'
             
             - name: Run Pluto notebooks
               run: julia -e 'import Pkg;
