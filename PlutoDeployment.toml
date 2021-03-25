@@ -1,0 +1,4 @@
+[Export]
+offer_binder = true
+baked_state = false
+slider_server_url = "https://article-test-3.herokuapp.com/"

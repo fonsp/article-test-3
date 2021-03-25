@@ -17,7 +17,7 @@ This repository has:
 
 
 
-There is a Project.toml and **important: the Manifest.toml** in this repository containing the exact versions of Pluto.jl and PlutoBindServer.jl that are used in everything. (Needs to be the same everywhere)
+There is a Project.toml and **important: the Manifest.toml** in this repository containing the exact versions of Pluto.jl and PlutoSliderServer.jl that are used in everything. (Needs to be the same everywhere)
 
 
 
